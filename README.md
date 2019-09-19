@@ -22,3 +22,45 @@ OpenStack: cloud operating system open source for creating public and private in
 - OpenStack executables
 
     `sudo apt install python-openstackclient`
+
+## Virtual Environment
+
+1. `python3 -m venv venv`
+
+2. `source venv/bin/activate`
+
+## Create an Terraform environment
+
+1. mkdir test_terraform && cd test_terraform
+2. terraform env new test_terraform
+
+## Run file with OpenStack environment variables
+. terraform-openrc.sh
+
+## Create resources
+
+### Create the provider
+- file provider.tf
+
+### Create an instance
+
+1. pip install python-novaclient
+2. pip install python-glanceclient
+3. To find all flavor names, or instances types, you can enter the following command :
+
+    `nova flavor-list`
+
+4. To find all image name you can enter the following command :
+
+    `glance image-list`
+
+5. Create file simple_instance.tf
+
+
+## Run in a new session
+
+1. . terraform-openrc.sh
+2. cd test_terraform/
+3. nova flavor-list
+
+
