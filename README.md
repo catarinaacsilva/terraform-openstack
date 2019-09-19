@@ -43,14 +43,14 @@ OpenStack: cloud operating system open source for creating public and private in
 1. Create file provider.tf
 2. Configure this file:
 
-    `   provider "openstack" {
-            user_name   = "admin"
-            tenant_name = "admin"
-            password    = "pwd"
-            auth_url    = "http://myauthurl:5000/v2.0"
-            region      = "RegionOne"
-        }
-    `
+    `   provider "openstack" { `
+    `       user_name   = "admin" `
+    `       tenant_name = "admin" `
+    `       password    = "pwd" `
+    `       auth_url    = "http://myauthurl:5000/v2.0" `
+    `       region      = "RegionOne" `
+    `   } `
+    
 *Note*: https://www.terraform.io/docs/providers/openstack/index.html
 
 ### Create an instance
@@ -67,13 +67,13 @@ OpenStack: cloud operating system open source for creating public and private in
 
 5. Create file simple_instance.tf
 
-    `   # Create an SSH key pair resource
-        resource "openstack_compute_keypair_v2" "test_keypair" {
-            provider = "provider.tf" # Provider name
-            name = "SSH_KEY_NAME" # SSH key's name
-            public_key = "PATH_TO_PUBLIC_KEY" # Path of your SSH key
-        }
-    `
+    `   # Create an SSH key pair resource `
+    `    resource "openstack_compute_keypair_v2" "test_keypair" { `
+    `       provider = "provider.tf" # Provider name `
+    `       name = "SSH_KEY_NAME" # SSH key's name `
+    `       public_key = "PATH_TO_PUBLIC_KEY" # Path of your SSH key `
+    `    } `
+    
 
 ## Run in a new session
 
