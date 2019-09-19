@@ -44,11 +44,17 @@ OpenStack: cloud operating system open source for creating public and private in
 2. Configure this file:
 
     `   provider "openstack" { `
+
     `       user_name   = "admin" `
+
     `       tenant_name = "admin" `
+
     `       password    = "pwd" `
+
     `       auth_url    = "http://myauthurl:5000/v2.0" `
+
     `       region      = "RegionOne" `
+    
     `   } `
     
 *Note*: https://www.terraform.io/docs/providers/openstack/index.html
