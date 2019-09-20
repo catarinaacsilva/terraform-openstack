@@ -35,6 +35,7 @@ OpenStack: cloud operating system open source for creating public and private in
 
 ## Run file with OpenStack environment variables
 `. terraform-openrc.sh`
+
 *complete this file with information about openstack (you can obtain this in your private account at openstack)*
 
 ## Create an instance
@@ -50,6 +51,7 @@ OpenStack: cloud operating system open source for creating public and private in
     `glance image-list`
 
 5. Create file simple_instance.tf
+
 * See this file and fill with your information*
 
 
