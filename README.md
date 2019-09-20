@@ -54,6 +54,9 @@ OpenStack: cloud operating system open source for creating public and private in
 
 *See this file and fill with your information*
 
+## Run
+
+`terraform apply`
 
 ## Run in a new session
 
