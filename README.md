@@ -8,7 +8,7 @@ OpenStack: cloud operating system open source for creating public and private in
 
 - An OpenStack user
 - OpenStack environment variables
-- SSH key
+- SSH key: generate your key pair
 - Terraform executable
 
    1. `wget https://releases.hashicorp.com/terraform/0.12.9/terraform_0.12.9_linux_amd64.zip`
@@ -35,26 +35,9 @@ OpenStack: cloud operating system open source for creating public and private in
 
 ## Run file with OpenStack environment variables
 `. terraform-openrc.sh`
+*complete this file with information about openstack (you can obtain this in your private account at openstack)*
 
-## Create resources
-
-### Create the provider
-1. Create file provider.tf
-2. Configure this file:
-
-```
-       provider "openstack" { 
-            user_name   = "admin" 
-            tenant_name = "admin" 
-            password    = "pwd"
-            auth_url    = "http://myauthurl:5000/v2.0" 
-            region      = "RegionOne"
-       } 
-```
-    
-*Note*: https://www.terraform.io/docs/providers/openstack/index.html
-
-### Create an instance
+## Create an instance
 
 1. `pip install python-novaclient`
 2. `pip install python-glanceclient`
@@ -67,15 +50,8 @@ OpenStack: cloud operating system open source for creating public and private in
     `glance image-list`
 
 5. Create file simple_instance.tf
+* See this file and fill with your information*
 
-```
-        # Create an SSH key pair resource 
-        resource "openstack_compute_keypair_v2" "test_keypair" { 
-            provider = "provider.tf" # Provider name 
-            name = "SSH_KEY_NAME" # SSH key's name 
-            public_key = "PATH_TO_PUBLIC_KEY" # Path of your SSH key 
-        } 
-```
 
 ## Run in a new session
 
