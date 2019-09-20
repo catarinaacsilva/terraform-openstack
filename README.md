@@ -52,7 +52,7 @@ OpenStack: cloud operating system open source for creating public and private in
 
 5. Create file simple_instance.tf
 
-* See this file and fill with your information*
+*See this file and fill with your information*
 
 
 ## Run in a new session
